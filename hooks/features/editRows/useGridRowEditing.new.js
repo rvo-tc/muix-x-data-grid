@@ -70,9 +70,9 @@ export const useGridRowEditing = (apiRef, props) => {
     nextFocusedCell.current = params;
   }, []);
   const handleCellFocusOut = React.useCallback((params, event) => {
-    if (!params.isEditable) {
-      return;
-    }
+    // if (!params.isEditable) {
+    //   return;
+    // }
 
     if (apiRef.current.getRowMode(params.id) === GridRowModes.View) {
       return;
